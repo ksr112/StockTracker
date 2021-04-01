@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane stylesheets="@../styles/First.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kaushiksitaraman.StockTracker.FirstController">
+   <children>
+      <Pane fx:id="first_pane" prefHeight="483.0" prefWidth="627.0" />
+      <BorderPane fx:id="borderpane" prefHeight="483.0" prefWidth="627.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane fx:id="pane_topbox" prefHeight="64.0" prefWidth="589.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="topbox" layoutY="-1.0" prefHeight="67.0" prefWidth="627.0">
+                     <children>
+                        <ToggleButton fx:id="btn_Quote" mnemonicParsing="false" onAction="#Quote_Open" onMouseEntered="#qtmouse_enter" onMouseExited="#qtmouse_exit" prefHeight="67.0" prefWidth="210.0" text="Stock Quote">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fx:id="img_quote" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </ToggleButton>
+                        <ToggleButton fx:id="btn_Graph" mnemonicParsing="false" onAction="#Graph_Open" onMouseEntered="#grphmouse_enter" onMouseExited="#grphmouse_exit" prefHeight="67.0" prefWidth="210.0" text="Stock  Graph">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="img_graph" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="btn_Settings" mnemonicParsing="false" onAction="#Settings_Open" onMouseEntered="#settmouse_enter" onMouseExited="#settmouse_exit" prefHeight="67.0" prefWidth="210.0" text="Settings">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fx:id="img_settings" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </ToggleButton>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane fx:id="center_pane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="hbox_key" layoutX="109.0" layoutY="28.0" prefHeight="26.0" prefWidth="379.0">
+                     <children>
+                        <ImageView fx:id="img_information" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets bottom="1.0" top="1.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="lbl_key" prefHeight="26.0" prefWidth="254.0" text="Please, provide the RapidAPI key">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="btn_key" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sett_open" prefHeight="22.0" prefWidth="75.0" text="Settings">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="10.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <ToggleButton fx:id="btn_quote2" contentDisplay="TOP" layoutX="145.0" layoutY="77.0" mnemonicParsing="false" onAction="#quote2_open" onMouseEntered="#quote2_enter" onMouseExited="#quote2_exit" prefHeight="132.0" prefWidth="144.0" text="Quote">
+                     <graphic>
+                        <ImageView fx:id="img_quote2" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding></ToggleButton>
+                  <ToggleButton fx:id="btn_graph2" contentDisplay="TOP" layoutX="314.0" layoutY="77.0" mnemonicParsing="false" onAction="#graph2_open" onMouseEntered="#graph2_enter" onMouseExited="#graph2_exit" prefHeight="132.0" prefWidth="144.0" text="Graph">
+                     <graphic>
+                        <ImageView fx:id="img_graph2" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding></ToggleButton>
+                  <ToggleButton fx:id="btn_ticker" contentDisplay="TOP" layoutX="145.0" layoutY="231.0" mnemonicParsing="false" onAction="#ticker_open" onMouseEntered="#ticker_enter" onMouseExited="#ticker_exit" prefHeight="132.0" prefWidth="144.0" text="Stock Ticker">
+                     <graphic>
+                        <ImageView fx:id="img_ticker" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding></ToggleButton>
+                  <ToggleButton fx:id="btn_theme" contentDisplay="TOP" layoutX="314.0" layoutY="231.0" mnemonicParsing="false" onAction="#change_theme" prefHeight="132.0" prefWidth="144.0">
+                     <graphic>
+                        <ImageView fx:id="img_theme" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding></ToggleButton>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
