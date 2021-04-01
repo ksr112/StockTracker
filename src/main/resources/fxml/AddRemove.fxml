@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane stylesheets="@../styles/AddRem.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kaushiksitaraman.StockTracker.AddRemove_Controller">
+   <children>
+      <Pane fx:id="pane" prefHeight="497.0" prefWidth="444.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <RadioButton fx:id="rdbtn_BSE" layoutX="141.0" layoutY="17.0" mnemonicParsing="false" onAction="#show_BSE" text="BSE" />
+            <RadioButton fx:id="rdbtn_NSE" layoutX="253.0" layoutY="17.0" mnemonicParsing="false" onAction="#show_NSE" text="NSE" />
+            <TableView fx:id="tblvw_Stock" layoutX="9.0" layoutY="40.0" prefHeight="360.0" prefWidth="426.0">
+            <placeholder>
+		        <Label text="" />
+		    </placeholder>
+              <columns>
+                <TableColumn fx:id="tblcl_Symbol" prefWidth="131.0" text="Symbol" />
+                <TableColumn fx:id="tblcl_Name" prefWidth="294.0" text="Name" />
+              </columns>
+            </TableView>
+            <HBox fx:id="hbox2" layoutX="9.0" layoutY="421.0" prefHeight="26.0" prefWidth="426.0">
+               <children>
+                  <TextField fx:id="txt_Symbol" prefHeight="26.0" prefWidth="174.0" promptText="Symbol">
+                     <HBox.margin>
+                        <Insets left="65.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btn_Add" mnemonicParsing="false" onAction="#add_Symbol" prefHeight="26.0" prefWidth="69.0" text="Add">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox cache="true" cacheHint="SPEED" layoutX="8.0" layoutY="447.0" prefHeight="26.0" prefWidth="426.0">
+               <children>
+                  <Label fx:id="lbl1" alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="211.0" text="To add, you can get the values from ">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Italic" size="9.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="link1" onAction="#open_link" prefHeight="16.0" prefWidth="255.0" text="https://in.finance.yahoo.com/">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Italic" size="10.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </HBox>
+            <HBox fx:id="hbox3" layoutX="8.0" layoutY="464.0" prefHeight="26.0" prefWidth="426.0">
+               <children>
+                  <Button fx:id="btn_Delete" mnemonicParsing="false" onAction="#delete_Entry" text="Delete">
+                     <HBox.margin>
+                        <Insets left="65.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_Reset" mnemonicParsing="false" onAction="#reset" text="Reset">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_Close" mnemonicParsing="false" onAction="#close_Window" text="Close">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
