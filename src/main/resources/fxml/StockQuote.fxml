@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minWidth="627.0" prefHeight="429.0" prefWidth="627.0" stylesheets="@../styles/Quote.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kaushiksitaraman.StockTracker.StockQuote_Controller">
+   <children>
+      <Pane fx:id="pane" prefHeight="429.0" prefWidth="627.0">
+         <children>
+            <RadioButton fx:id="rdbtn_nse" layoutX="336.0" layoutY="32.0" mnemonicParsing="false" onAction="#Select_Nse" text="NSE" />
+            <RadioButton fx:id="rdbtn_bse" layoutX="227.0" layoutY="32.0" mnemonicParsing="false" onAction="#Select_Bse" text="BSE" />
+            <ComboBox fx:id="combobox" editable="true" layoutX="167.0" layoutY="80.0" prefHeight="26.0" prefWidth="289.0" promptText="Select BSE or NSE" />
+            <Label fx:id="lbl_companyname" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="41.0" layoutY="121.0" prefHeight="28.0" prefWidth="546.0" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label fx:id="lbl_marketvalueheader" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="170.0" layoutY="159.0" prefHeight="33.0" prefWidth="109.0" text="Market Value" textAlignment="RIGHT" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Label>
+            <Label fx:id="lbl_marketvalue" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="284.0" layoutY="159.0" prefHeight="33.0" prefWidth="164.0" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <Label fx:id="lbl_changeheader" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="39.0" layoutY="211.0" prefHeight="33.0" prefWidth="129.0" text="Change with %" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_changevalue" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="173.0" layoutY="211.0" prefHeight="33.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <Label fx:id="lbl_highheader" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="39.0" layoutY="255.0" prefHeight="33.0" prefWidth="129.0" text="High" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_highvalue" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="173.0" layoutY="255.0" prefHeight="33.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <Label fx:id="lbl_lowheader" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="39.0" layoutY="302.0" prefHeight="33.0" prefWidth="129.0" text="Low" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_lowvalue" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="173.0" layoutY="302.0" prefHeight="33.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <Label fx:id="lbl_openheader" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="302.0" layoutY="210.0" prefHeight="33.0" prefWidth="109.0" text="Open rate" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_openvalue" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="432.0" layoutY="210.0" prefHeight="33.0" prefWidth="175.0" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <Label fx:id="lbl_closeheader" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="302.0" layoutY="254.0" prefHeight="33.0" prefWidth="109.0" text="Close rate" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_closevalue" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="432.0" layoutY="254.0" prefHeight="33.0" prefWidth="175.0" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <Label fx:id="lbl_marketcapheader" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="302.0" layoutY="301.0" prefHeight="33.0" prefWidth="109.0" text="Market Cap" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_marketcapvalue" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="434.0" layoutY="301.0" prefHeight="33.0" prefWidth="175.0" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <Button fx:id="btn_getquote" layoutX="167.0" layoutY="364.0" mnemonicParsing="false" onAction="#Get_Quote" prefHeight="17.0" prefWidth="91.0" text="Get Quote">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="btn_reset" layoutX="360.0" layoutY="364.0" mnemonicParsing="false" onAction="#reset" prefHeight="17.0" prefWidth="91.0" text="Reset">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
