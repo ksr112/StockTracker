@@ -1,0 +1,204 @@
+.dark
+{
+	-fx-background-color:#232323;
+}
+.white
+{
+	-fx-background-color:white;
+}
+
+
+.btn-white-Lime{
+	-fx-background-color:#A1D48F;
+	-fx-border-color: #485F3F;
+	-fx-border-width:0.15px;
+	-fx-text-fill:#485F3F;
+	 
+}
+
+.btn-white-Purple{
+	-fx-background-color:#AE84E4;
+	-fx-text-fill:#745898;
+ 	-fx-border-width:0.15px;
+ 	-fx-border-color: #745898;
+}
+
+.btn-white-Turquoise{
+	-fx-background-color:#1DDECB;
+	 -fx-text-fill:#139487;
+ 	 -fx-border-width:0.15px;
+ 	 -fx-border-color:#139487 ;
+ 	
+}
+
+.btn-white-Blue{
+	-fx-background-color:#627D98;
+	 -fx-text-fill:#415365;
+ 	  -fx-border-color: #415365;
+ 	  -fx-border-width:0.15px;
+	
+}
+
+.btn-white-Orange{
+	-fx-background-color:#FFA500;
+		 -fx-text-fill:#AA6E00;
+	 -fx-border-color:#AA6E00;
+	 -fx-border-width:0.15px;
+	
+}
+
+.btn-dark-Lime{
+	-fx-background-color:#A1D48F;
+	-fx-text-fill:#485F3F;
+	-fx-border-color: #485F3F;
+	-fx-border-width:0.15px;
+	
+}
+
+.btn-dark-Purple{
+	-fx-background-color:#AE84E4;
+	-fx-text-fill:#745898;
+ 	-fx-border-color: #745898;
+ 	-fx-border-width:0.15px;
+	
+}
+
+.btn-dark-Turquoise{
+	-fx-background-color:#1DDECB;
+	 -fx-text-fill:#139487;
+ 	 -fx-border-color:#139487 ;
+ 	 -fx-border-width:0.15px;
+	
+}
+
+.btn-dark-Blue{
+	-fx-background-color:#627D98;
+	 -fx-text-fill:#415365;
+ 	 -fx-border-color: #415365;
+ 	-fx-border-width:0.15px;
+	
+}
+
+.btn-dark-Orange{
+	-fx-background-color:#FFA500;
+	 -fx-text-fill:#AA6E00;
+ 	  -fx-border-color:#AA6E00;
+ 	-fx-border-width:0.15px;
+	
+}
+
+.hbox-white{
+	-fx-background-color:EBEAE6;
+	-fx-opacity:0.6;
+}
+
+.hbox-dark{
+	-fx-background-color:#121212;
+	-fx-opacity:0.6;
+}
+
+.btn-white{
+	-fx-background-color:#f5f5f5;
+	-fx-background-radius:15px;
+	-fx-border-color:#e0e0e0 ;
+	-fx-border-radius:15px;
+	-fx-text-fill:#121212;
+}
+
+.btn-dark{
+	-fx-background-color:#121212;
+	-fx-background-radius:15px;
+	-fx-border-color:black;
+	-fx-border-radius:15px;
+	-fx-text-fill:white;
+}
+
+.lbl-white{
+	-fx-text-fill:#121212;
+	
+}
+
+.lbl-dark{
+	-fx-text-fill:white;
+}
+
+.btn2-white-Lime{
+	-fx-background-color:#A1D48F;
+	-fx-border-color: #485F3F;
+	-fx-border-width:0.15px;
+	-fx-text-fill:#121212;
+	 
+}
+
+.btn2-white-Purple{
+	-fx-background-color:#AE84E4;
+ 	-fx-text-fill:#121212;
+ 	-fx-border-width:0.15px;
+	-fx-border-color: #745898;
+}
+
+.btn2-white-Turquoise{
+	-fx-background-color:#1DDECB;
+ 	 -fx-text-fill:#121212;
+ 	 -fx-border-width:0.15px;
+	 -fx-border-color:#139487 ;
+ 	
+}
+
+.btn2-white-Blue{
+	-fx-background-color:#627D98;
+ 	 -fx-text-fill:#121212;
+ 	  -fx-border-color: #415365;
+ 	  -fx-border-width:0.15px;
+	
+}
+
+.btn2-white-Orange{
+	-fx-background-color:#FFA500;
+ 	 -fx-text-fill:#121212;
+	 -fx-border-color:#AA6E00;
+	 -fx-border-width:0.15px;
+	
+}
+
+.btn2-dark-Lime{
+	-fx-background-color:#A1D48F;
+	-fx-text-fill:white;
+	-fx-border-color: #485F3F;
+	-fx-border-width:0.15px;
+	
+}
+
+.btn2-dark-Purple{
+	-fx-background-color:#AE84E4;
+ 	-fx-text-fill:white;
+ 	-fx-border-color: #745898;
+ 	-fx-border-width:0.15px;
+	
+}
+
+.btn2-dark-Turquoise{
+	-fx-background-color:#1DDECB;
+ 	 -fx-text-fill:white;
+ 	 -fx-border-color:#139487 ;
+ 	 -fx-border-width:0.15px;
+	
+}
+
+.btn2-dark-Blue{
+	-fx-background-color:#627D98;
+ 	 -fx-text-fill:white;
+ 	 -fx-border-color: #415365;
+ 	 -fx-border-width:0.15px;
+	
+}
+
+.btn2-dark-Orange{
+	-fx-background-color:#FFA500;
+ 	 -fx-text-fill:white;
+ 	  -fx-border-color:#AA6E00;
+ 	 -fx-border-width:0.15px;
+	
+}
+
+

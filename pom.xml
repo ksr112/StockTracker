@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ksr112</groupId>
+    <artifactId>StockTracker</artifactId>
+    <name>StockTracker</name>
+
+    <packaging>jar</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    
+    
+    
+    <organization>
+        <!-- Used as the 'Vendor' for JNLP generation -->
+        <name>1</name>
+    </organization>
+
+    <properties>
+	<!--  Setting Java version to 8 -->
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+
+        <slf4j.version>1.7.12</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
+    </properties>
+
+    <build>
+
+        <finalName>StockTracker</finalName>
+
+        <plugins>
+
+            <plugin>
+			      <artifactId>maven-assembly-plugin</artifactId>
+    
+                <configuration>
+				<archive>
+							<manifest>  
+									 <mainClass>com.kaushiksitaraman.StockTracker.Main</mainClass>
+							</manifest>
+				</archive>
+                   <descriptorRefs>jar-with-dependencies</descriptorRefs>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+
+    <dependencies>
+    	
+    	<!-- H2 Database -->
+    	
+    	 <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <version>1.4.197</version>
+    </dependency>
+    	
+    	
+    	<!-- ControlsFX -->
+    	
+    	<dependency>
+    		<groupId>org.controlsfx</groupId>
+    		<artifactId>controlsfx</artifactId>
+    		<version>8.40.18</version>
+		</dependency>
+		 <!-- JFxJfoenix -->
+       <dependency>
+		    <groupId>com.jfoenix</groupId>
+		    <artifactId>jfoenix</artifactId>
+		    <version>8.0.10</version>
+		</dependency>
+		<!-- OkHttp -->
+    	
+    	<dependency>
+   			 <groupId>com.squareup.okhttp3</groupId>
+    		 <artifactId>okhttp</artifactId>
+    		 <version>4.10.0-RC1</version>
+		</dependency>
+    
+        <!-- MigLayout -->
+
+        <dependency>
+            <groupId>com.miglayout</groupId>
+            <artifactId>miglayout-javafx</artifactId>
+            <version>5.0</version>
+        </dependency>
+
+        <!-- Apache Commons -->
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+        <!-- Logging  -->
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
