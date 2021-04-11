@@ -160,7 +160,7 @@ public class AddRemove_Controller {
     		txt_Symbol.setText("");
     		int strt = text.length()-3;
     		int end = text.length();
-    		if(text.substring(strt, end).equals(".BO"))
+    		if(text.substring(strt, end).equals(".BO") || text.equals(""))
     		{
     				Thread t = new Thread( new Runnable() {
     					 public void run()
@@ -287,7 +287,7 @@ public class AddRemove_Controller {
     		String text = txt_Symbol.getText().toUpperCase();
     		int strt = text.length()-3;
     		int end = text.length();
-    		if(text.substring(strt, end).equals(".NS")  )
+    		if(text.substring(strt, end).equals(".NS") || text.equals("") )
     		{
     			Thread t = new Thread( new Runnable() {
 					 public void run()
