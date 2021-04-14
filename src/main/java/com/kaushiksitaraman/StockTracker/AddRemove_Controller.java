@@ -89,6 +89,8 @@ public class AddRemove_Controller {
     
     private boolean isPresent;
     
+    String name ;
+    
     private static final Logger log = LoggerFactory.getLogger(FirstController.class);
     
     public void initialize()
@@ -160,7 +162,7 @@ public class AddRemove_Controller {
     		txt_Symbol.setText("");
     		int strt = text.length()-3;
     		int end = text.length();
-    		if(text.substring(strt, end).equals(".BO") || text.equals(""))
+    		if(text.substring(strt, end).equals(".BO") || text.equals("^BSESN"))
     		{
     				Thread t = new Thread( new Runnable() {
     					 public void run()
@@ -229,7 +231,14 @@ public class AddRemove_Controller {
 									else
 									{
 										System.out.println(result);
-										String name = connection.get_longname(result);
+										if(!text.equals("^BSESN"))
+										{
+											name = connection.get_longname(result);
+										}
+										else
+										{
+											name = "BSE SENSEX";
+										}
 										try {
 											Connection conn = entrydb.getBSEConnection();
 											entrydb.add_db_row(conn, "BSE", text, name);
@@ -287,7 +296,7 @@ public class AddRemove_Controller {
     		String text = txt_Symbol.getText().toUpperCase();
     		int strt = text.length()-3;
     		int end = text.length();
-    		if(text.substring(strt, end).equals(".NS") || text.equals("") )
+    		if(text.substring(strt, end).equals(".NS") || text.equals("^NSEI") )
     		{
     			Thread t = new Thread( new Runnable() {
 					 public void run()
@@ -382,8 +391,15 @@ public class AddRemove_Controller {
 										});				
 								}
 								else
-								{
-									String name = connection.get_longname(result);
+								{	
+									if(!text.equals("^NSEI"))
+									{
+										name = connection.get_longname(result);
+									}
+									else
+									{
+										name = "NIFTY 50";
+									}
 									try {
 										Connection conn = entrydb.getNSEConnection();
 										entrydb.add_db_row(conn, "NSE", text, name);
@@ -487,7 +503,7 @@ public class AddRemove_Controller {
 				yousure.getDialogPane().getStylesheets().add(getClass().getResource("/styles/myDialogs.css").toString());
 				yousure.getButtonTypes().setAll(Ok , Cancel);
 				Stage stage = (Stage) yousure.getDialogPane().getScene().getWindow();
-				 stage.setAlwaysOnTop(true);
+				stage.setAlwaysOnTop(true);
 				Node Okay = yousure.getDialogPane().lookupButton(Ok);
 				Okay.setId("btn-"+dataconn.getTheme()+"-"+dataconn.getSecTheme());
 				Node Cancelnd = yousure.getDialogPane().lookupButton(Cancel);
