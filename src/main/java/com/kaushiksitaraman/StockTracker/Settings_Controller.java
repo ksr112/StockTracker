@@ -1113,7 +1113,7 @@ public class Settings_Controller {
     	  Parent root = FXMLLoader.load(getClass().getResource("/fxml/AddRemove.fxml"));
     	  Stage adrem_Stage = new Stage();
           Scene scene = new Scene(root, 444, 512);
-          adrem_Stage.initModality(Modality.APPLICATION_MODAL);
+          adrem_Stage.initModality(Modality.WINDOW_MODAL);
           adrem_Stage.initStyle(StageStyle.UNDECORATED);
           adrem_Stage.setAlwaysOnTop(true);
           adrem_Stage.resizableProperty().set(false);
