@@ -369,7 +369,7 @@ public class AddRemove_Controller {
 	
 											@Override
 											public void run() {
-												
+												//This means your daily limit has been exceeded
 												Alert over_quote = new Alert(AlertType.ERROR);
 												over_quote.setTitle("Error!");
 												over_quote.setHeaderText(null);
