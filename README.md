@@ -4,7 +4,7 @@ NSE and BSE Stock quote, graph and tickers
 
 Note : This is providing data with the help of Yahoo Finance API.So for this, one will need to get an account with RapidApi and subscribe to https://rapidapi.com/apidojo/api/yahoo-finance1
 
-Update: Now can add and remove stock data and have a custom list
+Update : Now can add and remove stock data and have a custom list
 
 ![Screenshot from 2021-04-09 02-14-19](https://user-images.githubusercontent.com/61354256/114289672-7d6d8200-9a97-11eb-8d53-f8e685e0e3ea.png)
 
